@@ -35,14 +35,14 @@ for _ in range(runs):
     while (red in urn): 
         #generate a random number between 0-2. This will be the index of the ball drawn in urn.Replace with blue
         urn[np.random.randint(3, size=1)[0]] = blue
-        #add to count
+        #add to count as we needed to draw
         count+= 1
  
-    #save count to neededDraws and reset 
+    #save count to neededDraws and reset count as we are starting over
     neededDraws.append(count)
     count = 0
     
-#convert result list to np array formplots and calculations
+#convert result list to np array for plots and calculations
 results= np.array(neededDraws)    
 
 #plot results
